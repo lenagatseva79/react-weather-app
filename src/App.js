@@ -11,10 +11,11 @@ export default function App() {
         This project was coded by{" "}
         <a
           href="https://www.linkedin.com/in/lena-gatseva-375802202/"
-          target="_blank">
+          target="_blank"
+        >
           Lena Gatseva
         </a>{" "}
-        and it is
+        and it is{" "}
         <a
           href="https://github.com/lenagatseva79/react-weather-app"
           target="_blank"
