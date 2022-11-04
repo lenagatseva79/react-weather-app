@@ -1,4 +1,29 @@
+body { 
+  background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+ul {
+    list-style-type: none;
+}
 .Weather {
     font-family: 'Comfortaa', cursive;
-    border: 1px solid black;
+    margin-top: 150px;
+    color: white;
 }
+.row-border {
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 8px;
+}
+.leftSide {
+    background-color: #cba1d2;
+    text-align: center;
+}
+.rightSide {
+    background-color: #ab72c0;
+}
+.icon {
+    max-width: 200px;
+} 
