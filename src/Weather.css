@@ -20,12 +20,22 @@ body {
 .rightSide h4 {
     margin-top: 16px;
 }
+.description {
+    font-size: 30px;
+}
+.currentTime {
+    margin-top: 35px;
+    font-size: 18px;
+}
+.searchedCity {
+    font-size: 18px;
+}
 .Weather {
     font-family: 'Comfortaa', cursive;
     margin: 0 30px;
 }
 .row-border {
-    border: 1.5px solid rgb(69, 69, 69);
+    border: 2px solid rgb(69, 69, 69);
     border-radius: 5px;
 }
 .leftSide {
@@ -40,10 +50,17 @@ body {
 .icon {
     max-width: 160px;
 } 
+.highlights {
+    max-width: 45px;
+}
+.higlightsName {
+    font-size: 18px;
+    font-weight: bold;
+}
 .Weather .temperature {
     font-weight: bold;
-    font-size: 65px;
+    font-size: 70px;
 }
 .Weather .unit {
-    font-size: 55px;
+    font-size: 60px;
 }
