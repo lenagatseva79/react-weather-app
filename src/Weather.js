@@ -14,6 +14,7 @@ export default function Weather() {
                       type="search"
                       placeholder="Enter a city.."
                       className="form-control"
+                      autoFocus="on"
                     />
                   </div>
                   <div className="col-3">
@@ -31,7 +32,9 @@ export default function Weather() {
                   class="icon"
                   alt="Mostly cloudy"
                 />
-                <h1>15°C</h1>
+                <br/>
+                <span className="temperature">15</span>
+                <span className="unit">°C</span>
                 <li>Mostly cloudy</li>
                 <li>Sunday 11:00</li>
                 <li>📍Odesa</li>

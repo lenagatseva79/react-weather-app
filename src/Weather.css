@@ -1,8 +1,8 @@
 body { 
-    margin-top: 125px;
+  margin-top: 125px;
   background: linear-gradient(177.9deg, rgb(255, 228, 254) 5.3%, rgb(255, 228, 254) 5.3%, rgb(188, 132, 173) 94.7%) no-repeat center center fixed;
-  padding: 10px;
-margin: 100px auto;
+  padding: 15px;
+  margin: 100px auto;
 }
 .Weather ul {
     list-style-type: none;
@@ -11,8 +11,8 @@ margin: 100px auto;
 }
 .Weather form {
     margin-top: 16px;
-    padding-right: 12px;
     padding-bottom: 20px;
+    margin-right: 12px;
 }
 .leftSide ul {
     margin-bottom: 16px;
@@ -22,7 +22,7 @@ margin: 100px auto;
 }
 .Weather {
     font-family: 'Comfortaa', cursive;
-    margin: 30px;
+    margin: 0 30px;
 }
 .row-border {
     border: 1.5px solid rgb(69, 69, 69);
@@ -31,12 +31,19 @@ margin: 100px auto;
 .leftSide {
     background-color: #c573c9;
     text-align: center;
-    color: white;
+    color: black;
 }
 .rightSide {
     color: black;
     background-color:#FCE8E1 ;
 }
 .icon {
-    max-width: 200px;
+    max-width: 160px;
 } 
+.Weather .temperature {
+    font-weight: bold;
+    font-size: 65px;
+}
+.Weather .unit {
+    font-size: 55px;
+}
