@@ -14,6 +14,7 @@ export default function Weather() {
                       type="search"
                       placeholder="Enter a city.."
                       className="form-control"
+                      rel="noreferrer"
                     />
                   </div>
                   <div className="col-3">
@@ -21,6 +22,7 @@ export default function Weather() {
                       type="submit"
                       value="Search"
                       className="btn btn-primary"
+                      rel="noreferrer"
                     />
                   </div>
                 </div>
