@@ -5,6 +5,7 @@ import "./Weather.css";
 export default function Weather() {
     return (
       <div className="Weather">
+        <div className="container">
           <div className="row row-border">
             <div className="col-4 leftSide">
               <form>
@@ -25,7 +26,7 @@ export default function Weather() {
                   </div>
                 </div>
               </form>
-              <ul>
+              <ul className="leftSide">
                 <img
                   src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/513/original/cloudy.png?1667595985"
                   class="icon"
@@ -39,17 +40,22 @@ export default function Weather() {
             </div>
             <div className="col-8 rightSide">
               <h4>This weeks weather</h4>
-              <h4>Today's highlights for city</h4>
-              <ul>
-                <li>Sunrise</li>
-                <li>Sunset</li>
-                <li>Feels like</li>
-                <li>Humidity</li>
-                <li>Wind Speed</li>
-                <li>Visibility</li>
-              </ul>
+              <h5>Today's highlights for city</h5>
+              <div className="container">
+                <div className="row">
+                  <div className="col-4">Sunrise</div>
+                  <div className="col-4">Sunset</div>
+                  <div className="col-4">Feels like</div>
+                </div>
+                <div className="row">
+                  <div className="col-4">Humidity</div>
+                  <div className="col-4">Wind Speed</div>
+                  <div className="col-4">Visibility</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
     );   
 } 
