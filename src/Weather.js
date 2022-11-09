@@ -3,10 +3,28 @@ import "./Weather.css";
 import axios from "axios";
 
 
-export default function Weather() {
-  const apiKey = "4fa2fa98e001adffeee9f1033c8280d7";
-  let city = "Odesa";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false});
+  function handleResponse(response) {
+    console.log(response.data);
+    setWeatherData({
+      ready: true,
+      temperature: response.data.main.temp,
+      date: "Sunday 11:00",
+      humidity: response.data.main.humidity,
+      feelsLike: response.data.main.feels_like,
+      //sunrise: new Date(response.data.sys.sunrise * 1000),
+      //sunset: new Date(response.data.sys.sunset * 1000),
+      wind: response.data.wind.speed,
+      visibility: response.data.visibility / 1000,
+      city: response.data.name,
+      description: response.data.weather[0].description,
+      iconUrl:
+        "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/513/original/cloudy.png?1667595985",
+    });
+  }
+
+  if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="container">
@@ -38,11 +56,15 @@ export default function Weather() {
                   alt="Mostly cloudy"
                 />
                 <br />
-                <span className="temperature">15</span>
+                <span className="temperature">
+                  {Math.round(weatherData.temperature)}
+                </span>
                 <span className="unit">°C</span>
-                <li className="description">Mostly cloudy</li>
+                <li className="description text-capitalize">
+                  {weatherData.description}
+                </li>
                 <li className="currentTime">Sunday 11:00</li>
-                <li className="searchedCity">📍Odesa</li>
+                <li className="searchedCity">📍{weatherData.city}</li>
               </ul>
             </div>
             <div className="col-8 rightSide">
@@ -58,7 +80,7 @@ export default function Weather() {
                         class="highlights"
                         alt="Mostly cloudy"
                       />
-                      <li>6:58</li>
+                      <li>{weatherData.sunrise}</li>
                     </ul>
                   </div>
                   <div className="col-4">
@@ -69,7 +91,7 @@ export default function Weather() {
                         class="highlights"
                         alt="Mostly cloudy"
                       />
-                      <li>18:32</li>
+                      <li>{weatherData.sunset}</li>
                     </ul>
                   </div>
                   <div className="col-4">
@@ -80,7 +102,7 @@ export default function Weather() {
                         class="highlights"
                         alt="Mostly cloudy"
                       />
-                      <li>13°C</li>
+                      <li>{Math.round(weatherData.feelsLike)}°C</li>
                     </ul>
                   </div>
                 </div>
@@ -93,7 +115,7 @@ export default function Weather() {
                         class="highlights"
                         alt="Mostly cloudy"
                       />
-                      <li>50%</li>
+                      <li>{weatherData.humidity}%</li>
                     </ul>
                   </div>
                   <div className="col-4">
@@ -104,18 +126,18 @@ export default function Weather() {
                         class="highlights"
                         alt="Mostly cloudy"
                       />
-                      <li>13km/h</li>
+                      <li>{weatherData.wind} km/h</li>
                     </ul>
                   </div>
                   <div className="col-4">
                     <ul className="text-center">
-                      <li className="higlightsName">Precipitation</li>
+                      <li className="higlightsName">Visibility</li>
                       <img
                         src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/513/original/cloudy.png?1667595985"
                         class="highlights"
                         alt="Mostly cloudy"
                       />
-                      <li>17%</li>
+                      <li>{weatherData.visibility}km</li>
                     </ul>
                   </div>
                 </div>
@@ -124,5 +146,12 @@ export default function Weather() {
           </div>
         </div>
       </div>
-    );   
+    );  
+  } else {
+     const apiKey = "4fa2fa98e001adffeee9f1033c8280d7";
+     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+     axios.get(apiUrl).then(handleResponse);
+
+     return "Loading...";
+  }   
 } 
