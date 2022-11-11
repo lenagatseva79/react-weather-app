@@ -137,7 +137,7 @@ export default function Weather(props) {
                         class="highlights"
                         alt="Mostly cloudy"
                       />
-                      <li>{weatherData.visibility}km</li>
+                      <li>{weatherData.visibility} km</li>
                     </ul>
                   </div>
                 </div>
