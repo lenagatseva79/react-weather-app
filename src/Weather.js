@@ -21,8 +21,7 @@ export default function Weather(props) {
       visibility: response.data.visibility / 1000,
       city: response.data.name,
       description: response.data.weather[0].description,
-      iconUrl:
-        "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/513/original/cloudy.png?1667595985",
+      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
   }
   
@@ -68,7 +67,7 @@ export default function Weather(props) {
               </form>
               <ul className="leftSide">
                 <img
-                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/513/original/cloudy.png?1667595985"
+                  src={weatherData.iconUrl}
                   class="icon"
                   alt="Mostly cloudy"
                 />
@@ -100,7 +99,7 @@ export default function Weather(props) {
                         alt="Mostly cloudy"
                       />
                       <li>
-                        <FormattedTime date ={weatherData.sunrise} />
+                        <FormattedTime date={weatherData.sunrise} />
                       </li>
                     </ul>
                   </div>
@@ -113,7 +112,7 @@ export default function Weather(props) {
                         alt="Mostly cloudy"
                       />
                       <li>
-                        <FormattedTime date ={weatherData.sunset} />
+                        <FormattedTime date={weatherData.sunset} />
                       </li>
                     </ul>
                   </div>
