@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Weather.css";
 import FormattedDate from "./FormattedDate";
+import FormattedTime from "./FormattedTime";
 import axios from "axios";
 
 
@@ -13,8 +14,8 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       humidity: response.data.main.humidity,
       feelsLike: response.data.main.feels_like,
-      //sunrise: new Date(response.data.sys.sunrise * 1000),
-      //sunset: new Date(response.data.sys.sunset * 1000),
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000),
       wind: response.data.wind.speed,
       visibility: response.data.visibility / 1000,
       city: response.data.name,
@@ -82,7 +83,9 @@ export default function Weather(props) {
                         class="highlights"
                         alt="Mostly cloudy"
                       />
-                      <li>{weatherData.sunrise}</li>
+                      <li>
+                        <FormattedTime date ={weatherData.sunrise} />
+                      </li>
                     </ul>
                   </div>
                   <div className="col-4">
@@ -93,7 +96,9 @@ export default function Weather(props) {
                         class="highlights"
                         alt="Mostly cloudy"
                       />
-                      <li>{weatherData.sunset}</li>
+                      <li>
+                        <FormattedTime date ={weatherData.sunset} />
+                      </li>
                     </ul>
                   </div>
                   <div className="col-4">
