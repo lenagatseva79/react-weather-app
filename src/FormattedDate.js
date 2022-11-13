@@ -1,4 +1,3 @@
-import { hasPointerEvents } from "@testing-library/user-event/dist/utils";
 import React from "react";
 
 export default function FormattedDate(props) {
