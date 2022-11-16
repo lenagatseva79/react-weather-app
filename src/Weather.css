@@ -59,8 +59,13 @@ body {
 }
 .Weather .temperature {
     font-weight: bold;
-    font-size: 70px;
+    font-size: 80px;
 }
 .Weather .unit {
-    font-size: 60px;
+  color: rgb(33, 33, 33);
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  line-height: 1;
+  top: -48px;
 }
