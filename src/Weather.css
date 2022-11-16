@@ -50,8 +50,17 @@ body {
 .icon {
     max-width: 160px;
 } 
+.higlights-borders {
+    border: 1px solid #FCE8E1;
+    border-radius: 10px;
+    background-color: #fccdff;
+}
 .highlights {
     max-width: 45px;
+    margin: 10px;
+}
+.higlights-description {
+    font-size: 18px;
 }
 .higlightsName {
     font-size: 18px;

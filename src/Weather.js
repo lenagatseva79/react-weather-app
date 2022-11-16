@@ -70,12 +70,10 @@ export default function Weather(props) {
                 <img
                   src={weatherData.iconUrl}
                   class="icon"
-                  alt="Mostly cloudy"
+                  alt="Current weather icon"
                 />
                 <br />
-                <WeatherTemperature
-                  celsius={weatherData.temperature}
-                />
+                <WeatherTemperature celsius={weatherData.temperature} />
                 <li className="description text-capitalize">
                   {weatherData.description}
                 </li>
@@ -87,79 +85,89 @@ export default function Weather(props) {
             </div>
             <div className="col-8 rightSide">
               <h4 className="fw-bold fs-3">This weeks weather</h4>
-              <h5 className="fw-bold fs-3">Today's highlights for city</h5>
+              <h5 className="fw-bold fs-3">
+                Today's highlights for {weatherData.city}
+              </h5>
               <div className="container">
                 <div className="row">
-                  <div className="col-4">
-                    <ul className="text-center">
+                  <div className="col-4 p-1">
+                    <ul className="text-center higlights-borders shadow-sm ">
                       <li className="higlightsName">Sunrise</li>
                       <img
-                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/513/original/cloudy.png?1667595985"
+                        src={require("./images/sunrise.png")}
                         class="highlights"
-                        alt="Mostly cloudy"
+                        alt="Sunrise"
                       />
-                      <li>
+                      <li className="higlights-description">
                         <FormattedTime date={weatherData.sunrise} />
                       </li>
                     </ul>
                   </div>
-                  <div className="col-4">
-                    <ul className="text-center">
+                  <div className="col-4 p-1">
+                    <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Sunset</li>
                       <img
-                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/513/original/cloudy.png?1667595985"
+                        src={require("./images/sunset.png")}
                         class="highlights"
-                        alt="Mostly cloudy"
+                        alt="Sunset"
                       />
-                      <li>
+                      <li className="higlights-description">
                         <FormattedTime date={weatherData.sunset} />
                       </li>
                     </ul>
                   </div>
-                  <div className="col-4">
-                    <ul className="text-center">
+                  <div className="col-4 p-1">
+                    <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Feels like</li>
                       <img
-                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/513/original/cloudy.png?1667595985"
+                        src={require("./images/feelslike.png")}
                         class="highlights"
-                        alt="Mostly cloudy"
+                        alt="Feels like"
                       />
-                      <li>{Math.round(weatherData.feelsLike)}°C</li>
+                      <li className="higlights-description">
+                        {Math.round(weatherData.feelsLike)}°C
+                      </li>
                     </ul>
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-4">
-                    <ul className="text-center">
+                  <div className="col-4 p-1">
+                    <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Humidity</li>
                       <img
-                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/513/original/cloudy.png?1667595985"
+                        src={require("./images/humidity.png")}
                         class="highlights"
-                        alt="Mostly cloudy"
+                        alt="Humidity"
                       />
-                      <li>{weatherData.humidity}%</li>
+                      <li className="higlights-description">
+                        {weatherData.humidity}%
+                      </li>
                     </ul>
                   </div>
-                  <div className="col-4">
-                    <ul className="text-center">
+                  <div className="col-4 p-1">
+                    <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Wind Speed</li>
                       <img
-                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/513/original/cloudy.png?1667595985"
+                        src={require("./images/windy.png")}
                         class="highlights"
-                        alt="Mostly cloudy"
+                        alt="Wind speed"
                       />
-                      <li>{weatherData.wind} km/h</li>
+                      <li className="higlights-description">
+                        {weatherData.wind} km/h
+                      </li>
                     </ul>
                   </div>
-                  <div className="col-4">
-                    <ul className="text-center">
+                  <div className="col-4 p-1">
+                    <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Visibility</li>
                       <img
-                        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/051/513/original/cloudy.png?1667595985"
+                        src={require("./images/visibility.png")}
                         class="highlights"
-                        alt="Mostly cloudy"
+                        alt="Visibility"
                       />
-                      <li>{weatherData.visibility} km</li>
+                      <li className="higlights-description">
+                        {weatherData.visibility} km
+                      </li>
                     </ul>
                   </div>
                 </div>
