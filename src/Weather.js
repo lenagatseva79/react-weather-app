@@ -3,6 +3,7 @@ import "./Weather.css";
 import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherIcon from "./WeatherIcon";
 import axios from "axios";
 
 
@@ -22,7 +23,7 @@ export default function Weather(props) {
       visibility: response.data.visibility / 1000,
       city: response.data.name,
       description: response.data.weather[0].description,
-      iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+      icon: response.data.weather[0].icon,
     });
   }
   
@@ -67,11 +68,7 @@ export default function Weather(props) {
                 </div>
               </form>
               <ul className="leftSide">
-                <img
-                  src={weatherData.iconUrl}
-                  class="icon"
-                  alt="Current weather icon"
-                />
+                <WeatherIcon code={weatherData.icon} />
                 <br />
                 <WeatherTemperature celsius={weatherData.temperature} />
                 <li className="description text-capitalize">
