@@ -4,6 +4,7 @@ import FormattedDate from "./FormattedDate";
 import FormattedTime from "./FormattedTime";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherIcon from "./WeatherIcon";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 
 
@@ -68,7 +69,7 @@ export default function Weather(props) {
                 </div>
               </form>
               <ul className="leftSide">
-                <WeatherIcon code={weatherData.icon} />
+                <WeatherIcon code={weatherData.icon} size={150}/>
                 <br />
                 <WeatherTemperature celsius={weatherData.temperature} />
                 <li className="description text-capitalize">
@@ -82,6 +83,7 @@ export default function Weather(props) {
             </div>
             <div className="col-8 rightSide">
               <h4 className="fw-bold fs-3">This weeks weather</h4>
+              <WeatherForecast />
               <h5 className="fw-bold fs-3">
                 Today's highlights for {weatherData.city}
               </h5>

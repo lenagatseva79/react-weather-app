@@ -1,4 +1,4 @@
-
+import React from "react";
 
 export default function WeatherIcon(props) {
   const codeMapping = {
@@ -23,6 +23,6 @@ export default function WeatherIcon(props) {
   };
 
   return (
-    <img src={codeMapping[props.code]} alt={props.alt} className="main-icon" />
+    <img src={codeMapping[props.code]} alt={props.alt} width={props.size} />
   );
 }
