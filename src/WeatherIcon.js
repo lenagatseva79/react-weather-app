@@ -22,5 +22,7 @@ export default function WeatherIcon(props) {
     "50n": require("./images/mist.png"),
   };
 
-  return codeMapping[props.code];
+  return (
+    <img src={codeMapping[props.code]} alt={props.alt} className="main-icon" />
+  );
 }
