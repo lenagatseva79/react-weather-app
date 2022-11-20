@@ -70,28 +70,28 @@ export default function Weather(props) {
                 </div>
               </form>
               <ul className="leftSide">
-                <WeatherIcon code={weatherData.icon} size={150}/>
+                <WeatherIcon code={weatherData.icon} size={150} />
                 <br />
                 <WeatherTemperature celsius={weatherData.temperature} />
-                <li className="description text-capitalize">
+                <li className="description text-capitalize mt-2">
                   {weatherData.description}
                 </li>
                 <li className="currentTime">
                   <FormattedDate date={weatherData.date} />
                 </li>
-                <li className="searchedCity">📍{weatherData.city}</li>
+                <li className="searchedCity fw-bold">📍{weatherData.city}</li>
               </ul>
             </div>
             <div className="col-8 rightSide">
               <h4 className="fw-bold fs-3">This weeks weather</h4>
-              <WeatherForecast coordinates={weatherData.coordinates}/>
-              <h5 className="fw-bold fs-3">
+              <WeatherForecast coordinates={weatherData.coordinates} />
+              <h5 className="fw-bold fs-3 mt-3">
                 Today's highlights for {weatherData.city}
               </h5>
               <div className="container">
                 <div className="row">
                   <div className="col-4 p-1">
-                    <ul className="text-center higlights-borders shadow-sm ">
+                    <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Sunrise</li>
                       <img
                         src={require("./images/sunrise.png")}
@@ -130,7 +130,7 @@ export default function Weather(props) {
                     </ul>
                   </div>
                 </div>
-                <div className="row">
+                <div className="row mb-2">
                   <div className="col-4 p-1">
                     <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Humidity</li>

@@ -61,10 +61,12 @@ body {
 }
 .higlights-description {
     font-size: 18px;
+    margin-bottom: 10px;
 }
 .higlightsName {
     font-size: 18px;
     font-weight: bold;
+    margin-top: 10px;
 }
 .Weather .temperature {
     font-weight: bold;
