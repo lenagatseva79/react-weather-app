@@ -5,6 +5,7 @@ import FormattedTime from "./FormattedTime";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherIcon from "./WeatherIcon";
 import WeatherForecast from "./WeatherForecast";
+import { ThreeDots } from "react-loader-spinner";
 import axios from "axios";
 
 
@@ -179,6 +180,16 @@ export default function Weather(props) {
     );  
   } else {
     search();
-     return "Loading...";
+     return (<ThreeDots
+height="80" 
+width="150" 
+radius="9"
+color="#FFFFF" 
+ariaLabel="three-dots-loading"
+wrapperStyle={{}}
+wrapperClassName=""
+visible={true}
+ />
+ );
   }   
 } 
