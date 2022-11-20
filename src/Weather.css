@@ -86,13 +86,24 @@ body {
     border: 1px solid black;
     margin-top: 1px;
     margin-right: 5px;
-    padding: 5px 10px;
+    padding: 5px 12px;
 }
 .btn-branding:hover {
     background-color: #fccdff;
     color: black;
     border: 1px solid black;
 }
-.search-button {
-    padding: 0;
+@media (max-width: 960px) {
+    .btn-branding{
+        padding: 1px 12px;
+    }
+    .form-control {
+        padding: 2px 10px;
+    }
+    .city-button {
+        padding-left: 10px;
+    }
+    .search-button {
+        padding-left: 0;
+    }
 }
