@@ -49,7 +49,7 @@ export default function Weather(props) {
       <div className="Weather">
         <div className="container">
           <div className="row row-border">
-            <div className="col-4 leftSide">
+            <div className="col-lg-4 leftSide">
               <form onSubmit={handleSubmite}>
                 <div className="row">
                   <div className="col-9">
@@ -61,7 +61,7 @@ export default function Weather(props) {
                       onChange={handleCityChange}
                     />
                   </div>
-                  <div className="col-3">
+                  <div className="col-3 search-button">
                     <input
                       type="submit"
                       value="Search"
@@ -83,7 +83,7 @@ export default function Weather(props) {
                 <li className="searchedCity fw-bold">📍{weatherData.city}</li>
               </ul>
             </div>
-            <div className="col-8 rightSide">
+            <div className="col-lg-8 rightSide">
               <h4 className="fw-bold fs-3">This weeks weather</h4>
               <WeatherForecast coordinates={weatherData.coordinates} />
               <h5 className="fw-bold fs-3 mt-3">
@@ -91,7 +91,7 @@ export default function Weather(props) {
               </h5>
               <div className="container">
                 <div className="row">
-                  <div className="col-4 p-1">
+                  <div className="col-lg-4 p-1">
                     <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Sunrise</li>
                       <img
@@ -104,7 +104,7 @@ export default function Weather(props) {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-4 p-1">
+                  <div className="col-lg-4 p-1">
                     <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Sunset</li>
                       <img
@@ -117,7 +117,7 @@ export default function Weather(props) {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-4 p-1">
+                  <div className="col-lg-4 p-1">
                     <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Feels like</li>
                       <img
@@ -132,7 +132,7 @@ export default function Weather(props) {
                   </div>
                 </div>
                 <div className="row mb-2">
-                  <div className="col-4 p-1">
+                  <div className="col-lg-4 p-1">
                     <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Humidity</li>
                       <img
@@ -145,7 +145,7 @@ export default function Weather(props) {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-4 p-1">
+                  <div className="col-lg-4 p-1">
                     <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Wind Speed</li>
                       <img
@@ -158,7 +158,7 @@ export default function Weather(props) {
                       </li>
                     </ul>
                   </div>
-                  <div className="col-4 p-1">
+                  <div className="col-lg-4 p-1">
                     <ul className="text-center higlights-borders shadow-sm">
                       <li className="higlightsName">Visibility</li>
                       <img

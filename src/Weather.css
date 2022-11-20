@@ -84,9 +84,15 @@ body {
     background-color: #fccdff;
     color: black;
     border: 1px solid black;
+    margin-top: 1px;
+    margin-right: 5px;
+    padding: 5px 10px;
 }
 .btn-branding:hover {
     background-color: #fccdff;
     color: black;
     border: 1px solid black;
+}
+.search-button {
+    padding: 0;
 }
