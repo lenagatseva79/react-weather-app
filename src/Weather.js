@@ -91,8 +91,8 @@ export default function Weather(props) {
               </h5>
               <div className="container">
                 <div className="row">
-                  <div className="col-6">
-                    <div className="row mb-2">
+                  <div className="col-sm-6">
+                    <div className="row">
                       <div className="col-lg-4 p-1">
                         <ul className="text-center higlights-borders shadow-sm">
                           <li className="higlightsName">Sunrise</li>
@@ -134,7 +134,7 @@ export default function Weather(props) {
                       </div>
                     </div>
                   </div>
-                  <div className="col-6">
+                  <div className="col-sm-6">
                     <div className="row mb-2">
                       <div className="col-lg-4 p-1">
                         <ul className="text-center higlights-borders shadow-sm">
