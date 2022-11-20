@@ -107,3 +107,17 @@ body {
         padding-left: 0;
     }
 }
+@media (min-width: 960px) {
+    .search-button {
+        padding-left: 20px;
+    }
+    .form-control {
+        padding: 6px 15px;
+    }
+    .weeks-weather {
+        padding-top: 5px;
+    }
+    .higlights-name {
+        padding-top: 30px;
+    }
+}

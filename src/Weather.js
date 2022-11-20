@@ -74,7 +74,7 @@ export default function Weather(props) {
                 <WeatherIcon code={weatherData.icon} size={150} />
                 <br />
                 <WeatherTemperature celsius={weatherData.temperature} />
-                <li className="description text-capitalize mt-2">
+                <li className="description text-capitalize">
                   {weatherData.description}
                 </li>
                 <li className="currentTime">
@@ -84,92 +84,98 @@ export default function Weather(props) {
               </ul>
             </div>
             <div className="col-lg-8 rightSide">
-              <h4 className="fw-bold fs-3">This weeks weather</h4>
+              <h4 className="fw-bold fs-3 weeks-weather">This weeks weather</h4>
               <WeatherForecast coordinates={weatherData.coordinates} />
-              <h5 className="fw-bold fs-3 mt-3">
+              <h5 className="fw-bold fs-3 mt-3 higlights-name">
                 Today's highlights for {weatherData.city}
               </h5>
               <div className="container">
                 <div className="row">
-                  <div className="col-lg-4 p-1">
-                    <ul className="text-center higlights-borders shadow-sm">
-                      <li className="higlightsName">Sunrise</li>
-                      <img
-                        src={require("./images/sunrise.png")}
-                        class="highlights"
-                        alt="Sunrise"
-                      />
-                      <li className="higlights-description">
-                        <FormattedTime date={weatherData.sunrise} />
-                      </li>
-                    </ul>
+                  <div className="col-6">
+                    <div className="row mb-2">
+                      <div className="col-lg-4 p-1">
+                        <ul className="text-center higlights-borders shadow-sm">
+                          <li className="higlightsName">Sunrise</li>
+                          <img
+                            src={require("./images/sunrise.png")}
+                            class="highlights"
+                            alt="Sunrise"
+                          />
+                          <li className="higlights-description">
+                            <FormattedTime date={weatherData.sunrise} />
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="col-lg-4 p-1">
+                        <ul className="text-center higlights-borders shadow-sm">
+                          <li className="higlightsName">Sunset</li>
+                          <img
+                            src={require("./images/sunset.png")}
+                            class="highlights"
+                            alt="Sunset"
+                          />
+                          <li className="higlights-description">
+                            <FormattedTime date={weatherData.sunset} />
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="col-lg-4 p-1">
+                        <ul className="text-center higlights-borders shadow-sm">
+                          <li className="higlightsName">Feels like</li>
+                          <img
+                            src={require("./images/feelslike.png")}
+                            class="highlights"
+                            alt="Feels like"
+                          />
+                          <li className="higlights-description">
+                            {Math.round(weatherData.feelsLike)}°C
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
-                  <div className="col-lg-4 p-1">
-                    <ul className="text-center higlights-borders shadow-sm">
-                      <li className="higlightsName">Sunset</li>
-                      <img
-                        src={require("./images/sunset.png")}
-                        class="highlights"
-                        alt="Sunset"
-                      />
-                      <li className="higlights-description">
-                        <FormattedTime date={weatherData.sunset} />
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-lg-4 p-1">
-                    <ul className="text-center higlights-borders shadow-sm">
-                      <li className="higlightsName">Feels like</li>
-                      <img
-                        src={require("./images/feelslike.png")}
-                        class="highlights"
-                        alt="Feels like"
-                      />
-                      <li className="higlights-description">
-                        {Math.round(weatherData.feelsLike)}°C
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="row mb-2">
-                  <div className="col-lg-4 p-1">
-                    <ul className="text-center higlights-borders shadow-sm">
-                      <li className="higlightsName">Humidity</li>
-                      <img
-                        src={require("./images/humidity.png")}
-                        class="highlights"
-                        alt="Humidity"
-                      />
-                      <li className="higlights-description">
-                        {weatherData.humidity}%
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-lg-4 p-1">
-                    <ul className="text-center higlights-borders shadow-sm">
-                      <li className="higlightsName">Wind Speed</li>
-                      <img
-                        src={require("./images/windy.png")}
-                        class="highlights"
-                        alt="Wind speed"
-                      />
-                      <li className="higlights-description">
-                        {weatherData.wind} km/h
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="col-lg-4 p-1">
-                    <ul className="text-center higlights-borders shadow-sm">
-                      <li className="higlightsName">Visibility</li>
-                      <img
-                        src={require("./images/visibility.png")}
-                        class="highlights"
-                        alt="Visibility"
-                      />
-                      <li className="higlights-description">
-                        {weatherData.visibility} km
-                      </li>
-                    </ul>
+                  <div className="col-6">
+                    <div className="row mb-2">
+                      <div className="col-lg-4 p-1">
+                        <ul className="text-center higlights-borders shadow-sm">
+                          <li className="higlightsName">Humidity</li>
+                          <img
+                            src={require("./images/humidity.png")}
+                            class="highlights"
+                            alt="Humidity"
+                          />
+                          <li className="higlights-description">
+                            {weatherData.humidity}%
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="col-lg-4 p-1">
+                        <ul className="text-center higlights-borders shadow-sm">
+                          <li className="higlightsName">Wind Speed</li>
+                          <img
+                            src={require("./images/windy.png")}
+                            class="highlights"
+                            alt="Wind speed"
+                          />
+                          <li className="higlights-description">
+                            {weatherData.wind} km/h
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="col-lg-4 p-1">
+                        <ul className="text-center higlights-borders shadow-sm">
+                          <li className="higlightsName">Visibility</li>
+                          <img
+                            src={require("./images/visibility.png")}
+                            class="highlights"
+                            alt="Visibility"
+                          />
+                          <li className="higlights-description">
+                            {weatherData.visibility} km
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
