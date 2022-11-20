@@ -80,3 +80,13 @@ body {
   line-height: 1;
   top: -48px;
 }
+.btn-primary {
+    background-color: #fccdff;
+    color: black;
+    border: 1px solid black;
+}
+.btn-primary:hover {
+    background-color: #fccdff;
+    color: black;
+    border: 1px solid black;
+}
