@@ -1,3 +1,22 @@
+# App's Purpouse 
+This App was created for searching for any city in the world and getting all the information about the weather at the current time and also you can see weather forecast for next 6 days
+
+# Major functions
+Weather
+WeatherForecast
+
+# Dependencies
+        "@testing-library/jest-dom": "^5.16.5",
+        "@testing-library/react": "^13.4.0",
+        "@testing-library/user-event": "^13.5.0",
+        "axios": "^1.1.3",
+        "bootstrap": "^5.2.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-loader-spinner": "^5.3.4",
+        "react-scripts": "5.0.1",
+        "web-vitals": "^2.1.4"
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
